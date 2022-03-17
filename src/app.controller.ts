@@ -1,4 +1,12 @@
-import { Controller, Request, Post, UseGuards, Get } from '@nestjs/common';
+import {
+  Controller,
+  Request,
+  Post,
+  UseGuards,
+  Get,
+  HttpCode,
+  HttpStatus,
+} from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 
 @Controller()
@@ -9,8 +17,13 @@ export class AppController {
     return req.user;
   }
 
-  @Get('importmaps')
-  async importmap(@Request() req) {
+  @Get()
+  async init() {
+    return 'Init successfully';
+  }
+
+  @Get('local-importmaps')
+  async localImportmap() {
     return JSON.parse(
       '{\n' +
         '      "imports": {\n' +
@@ -18,7 +31,7 @@ export class AppController {
         '        "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",\n' +
         '        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",\n' +
         '        "@joaoc/root-config": "//localhost:9000/joaoc-root-config.js",\n' +
-        '        "@joaoc/mf-header": "//localhost:8080/joaoc-mf-header.js",\n' + //serviceName.namespace.clusterName
+        '        "@joaoc/mf-header": "//localhost:8080/joaoc-mf-header.js",\n' +
         '        "@joaoc/mf-footer": "//localhost:8081/joaoc-mf-footer.js",\n' +
         '        "@joaoc/mf-home": "//localhost:8082/joaoc-mf-home.js",\n' +
         '        "@joaoc/mf-continents": "//localhost:4200/main.js",\n' +
@@ -31,8 +44,30 @@ export class AppController {
     );
   }
 
+  @Get('cluster-importmaps')
+  async clusterImportmap() {
+    return JSON.parse(
+      '{\n' +
+        '      "imports": {\n' +
+        '        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",\n' +
+        '        "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",\n' +
+        '        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",\n' +
+        '        "@joaoc/root-config": "//mf-portal.portal.docker-desktop/joaoc-root-config.js",\n' +
+        '        "@joaoc/mf-header": "//mf-header.portal.docker-desktop/joaoc-mf-header.js",\n' +
+        '        "@joaoc/mf-footer": "//mf-footer.portal.docker-desktop/joaoc-mf-footer.js",\n' +
+        '        "@joaoc/mf-home": "//mf-home.portal.docker-desktop/joaoc-mf-home.js",\n' +
+        '        "@joaoc/mf-continents": "//mf-continents.portal.docker-desktop/main.js",\n' +
+        '        "@joaoc/mf-europe": "//mf-europe.portal.docker-desktop/js/app.js",\n' +
+        '        "@joaoc/mf-africa": "//mf-africa.portal.docker-desktop/main.js",\n' +
+        '        "@joaoc/mf-america": "//mf-america.portal.docker-desktop/joaoc-mf-america.js",\n' +
+        '        "@joaoc/mf-shared": "//mf-shared.portal.docker-desktop/joaoc-mf-shared.js"\n' +
+        '      }\n' +
+        '    }',
+    );
+  }
+
   @Get('template')
-  async template(@Request() req) {
+  async template() {
     return JSON.parse(
       '{\n' +
         '   "containerEl":"body",\n' +
