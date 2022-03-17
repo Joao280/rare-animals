@@ -17,7 +17,7 @@ export class AppController {
     return req.user;
   }
 
-  @Get()
+  @Get('init')
   async init() {
     return 'Init successfully';
   }
