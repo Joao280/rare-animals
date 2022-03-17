@@ -52,15 +52,15 @@ export class AppController {
         '        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",\n' +
         '        "react": "https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.production.min.js",\n' +
         '        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.production.min.js",\n' +
-        '        "@joaoc/root-config": "//mf-portal.portal.docker-desktop/joaoc-root-config.js",\n' +
-        '        "@joaoc/mf-header": "//mf-header.portal.docker-desktop/joaoc-mf-header.js",\n' +
-        '        "@joaoc/mf-footer": "//mf-footer.portal.docker-desktop/joaoc-mf-footer.js",\n' +
-        '        "@joaoc/mf-home": "//mf-home.portal.docker-desktop/joaoc-mf-home.js",\n' +
-        '        "@joaoc/mf-continents": "//mf-continents.portal.docker-desktop/main.js",\n' +
-        '        "@joaoc/mf-europe": "//mf-europe.portal.docker-desktop/js/app.js",\n' +
-        '        "@joaoc/mf-africa": "//mf-africa.portal.docker-desktop/main.js",\n' +
-        '        "@joaoc/mf-america": "//mf-america.portal.docker-desktop/joaoc-mf-america.js",\n' +
-        '        "@joaoc/mf-shared": "//mf-shared.portal.docker-desktop/joaoc-mf-shared.js"\n' +
+        '        "@joaoc/root-config": "//rare-animals/mf-portal/joaoc-root-config.js",\n' +
+        '        "@joaoc/mf-header": "//rare-animals/mf-header/joaoc-mf-header.js",\n' +
+        '        "@joaoc/mf-footer": "//rare-animals/mf-footer/joaoc-mf-footer.js",\n' +
+        '        "@joaoc/mf-home": "//rare-animals/mf-home/joaoc-mf-home.js",\n' +
+        '        "@joaoc/mf-continents": "//rare-animals/mf-continents/main.js",\n' +
+        '        "@joaoc/mf-europe": "//rare-animals/mf-europe/js/app.js",\n' +
+        '        "@joaoc/mf-africa": "//rare-animals/mf-africa./main.js",\n' +
+        '        "@joaoc/mf-america": "//rare-animals/mf-america./joaoc-mf-america.js",\n' +
+        '        "@joaoc/mf-shared": "//rare-animals/mf-shared./joaoc-mf-shared.js"\n' +
         '      }\n' +
         '    }',
     );
