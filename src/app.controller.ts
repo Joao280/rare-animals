@@ -6,6 +6,7 @@ import {
   Get,
   HttpCode,
   HttpStatus,
+  Header,
 } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 
@@ -22,6 +23,7 @@ export class AppController {
     return 'Init successfully';
   }
 
+  @Header('content-type', 'application/json')
   @Get('local-importmaps')
   async localImportmap() {
     return JSON.parse(
@@ -44,6 +46,7 @@ export class AppController {
     );
   }
 
+  @Header('content-type', 'application/json')
   @Get('cluster-importmaps')
   async clusterImportmap() {
     return JSON.parse(
@@ -66,6 +69,7 @@ export class AppController {
     );
   }
 
+  @Header('content-type', 'application/json')
   @Get('template')
   async template() {
     return JSON.parse(
