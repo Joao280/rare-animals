@@ -61,7 +61,7 @@ export class AppController {
         '        "@joaoc/mf-home": "//rare-animals/mf-home/joaoc-mf-home.js",\n' +
         '        "@joaoc/mf-continents": "//rare-animals/mf-continents/main.js",\n' +
         '        "@joaoc/mf-europe": "//rare-animals/mf-europe/js/app.js",\n' +
-        '        "@joaoc/mf-africa": "//rare-animals/africa/main.js",\n' +
+        '        "@joaoc/mf-africa": "//rare-animals/mf-africa/main.js",\n' +
         '        "@joaoc/mf-america": "//rare-animals/mf-america/joaoc-mf-america.js",\n' +
         '        "@joaoc/mf-shared": "//rare-animals/mf-shared/joaoc-mf-shared.js"\n' +
         '      }\n' +
