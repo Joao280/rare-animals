@@ -38,7 +38,7 @@ export class AppController {
         '        "@joaoc/mf-home": "//localhost:8082/joaoc-mf-home.js",\n' +
         '        "@joaoc/mf-continents": "//localhost:4200/main.js",\n' +
         '        "@joaoc/mf-europe": "//localhost:8083/js/app.js",\n' +
-        '        "@joaoc/mf-africa": "//rare-animals/mf-africa/main.js",\n' +
+        '        "@joaoc/mf-africa": "//localhost:4201/main.js",\n' +
         '        "@joaoc/mf-america": "//localhost:8084/joaoc-mf-america.js",\n' +
         '        "@joaoc/mf-shared": "//localhost:8085/joaoc-mf-shared.js"\n' +
         '      }\n' +
